@@ -10,24 +10,45 @@
     <description>FrontControllerDemo</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <spring.version>4.2.1.RELEASE</spring.version>
     </properties>
     <dependencies>
         <!-- Spring Boot Starter Web includes Spring MVC and other required dependencies -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--            <version>${spring.boot.version}</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.1</version>
         </dependency>
     </dependencies>
     <build>
-        <plugins>
-            <!-- Spring Boot Maven Plugin to run the application -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
-            </plugin>
-        </plugins>
+<!--        <plugins>-->
+<!--            &lt;!&ndash; Spring Boot Maven Plugin to run the application &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>${spring.boot.version}</version>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
     </build>
 </project>
