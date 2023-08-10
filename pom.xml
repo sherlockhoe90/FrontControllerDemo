@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.inexture</groupId>
+    <artifactId>FrontControllerDemo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>FrontControllerDemo</name>
+    <description>FrontControllerDemo</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+    </properties>
+    <dependencies>
+        <!-- Spring Boot Starter Web includes Spring MVC and other required dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin to run the application -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
