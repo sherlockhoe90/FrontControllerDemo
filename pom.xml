@@ -9,22 +9,18 @@
     <name>FrontControllerDemo</name>
     <description>FrontControllerDemo</description>
     <properties>
-        <java.version>1.8</java.version>
-        <spring.version>4.2.1.RELEASE</spring.version>
+        <java.version>17</java.version>
+        <spring.version>5.3.10</spring.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
     <dependencies>
-        <!-- Spring Boot Starter Web includes Spring MVC and other required dependencies -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--            <version>${spring.boot.version}</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -38,17 +34,26 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.4.1</version>
+            <version>2.12.5</version>
         </dependency>
     </dependencies>
+
     <build>
-<!--        <plugins>-->
-<!--            &lt;!&ndash; Spring Boot Maven Plugin to run the application &ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>${spring.boot.version}</version>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <!-- other build configuration elements -->
     </build>
+
 </project>
