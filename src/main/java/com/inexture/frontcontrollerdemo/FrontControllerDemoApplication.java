@@ -1,12 +1,16 @@
 package com.inexture.frontcontrollerdemo;
 
 import com.inexture.service.StackService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class FrontControllerDemoApplication {
+
+    private static Logger logger = LogManager.getLogger("FrontControllerDemoApplication");
 
     // Get the application context (container)
 //    ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/webapp/WEB-INF/springrest-servlet.xml");
@@ -18,7 +22,7 @@ public class FrontControllerDemoApplication {
     @RequestMapping(value = "/person", method = RequestMethod.GET)
     public String sayHello() {
         String greeting = "Hello World";
-        System.out.println(greeting);
+        logger.info(greeting);
         return greeting;
     }
 
